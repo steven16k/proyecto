@@ -1,0 +1,142 @@
+:root {
+  --main-bg-color: rgba(255, 255, 255, 0.8);
+  --main-font-family: "Arial", sans-serif;
+  --main-font-size: 16px;
+  --main-font-color: #000;
+  --input-placeholder-color: #16325b;
+  --button-bg-color: #c40c0c;
+  --button-hover-bg-color: #a30a0a;
+  --forgot-password-color: #16325b;
+  --box-width: 400px;
+  --box-padding: 30px;
+  --box-border-radius: 15px;
+  --logo-size: 150px;
+  --input-height: 40px;
+  --input-padding-left: 40px;
+  --button-height: 45px;
+  --forgot-password-font-size: 14px;
+}
+
+
+
+
+
+/* Estilos principales */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font-family);
+  height: 100%; /* Asegura que el body y html ocupen toda la altura */
+}
+
+/* Contenedor principal */
+.login-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Fondo */
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Caja de login */
+.login-box {
+  width: var(--box-width);
+  padding: var(--box-padding);
+  background: var(--main-bg-color);
+  border-radius: var(--box-border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  width: var(--logo-size);
+  height: var(--logo-size);
+  margin-bottom: 15px;
+}
+
+/* Título */
+.title {
+  font-size: 20px;
+  color: var(--main-font-color);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Formulario */
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Grupo de entrada */
+.input-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+}
+
+.input-field {
+  width: 90%;
+  height: var(--input-height);
+  padding-left: var(--input-padding-left);
+  border: none;
+  border-bottom: 2px solid var(--main-font-color);
+  background: transparent;
+  font-size: var(--main-font-size);
+  color: var(--main-font-color);
+}
+
+.input-field::placeholder {
+  color: var(--input-placeholder-color);
+}
+
+/* Botón de login */
+.login-button {
+  width: 100%;
+  height: var(--button-height);
+  background: var(--button-bg-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: var(--main-font-size);
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background: var(--button-hover-bg-color);
+}
+
+/* Texto de contraseña olvidada */
+.forgot-password {
+  margin-top: 15px;
+  font-size: var(--forgot-password-font-size);
+  color: var(--forgot-password-color);
+  cursor: pointer;
+}

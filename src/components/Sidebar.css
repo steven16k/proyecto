@@ -1,0 +1,213 @@
+
+/* Sidebar principal */
+.sidebar {
+  width: 250px; /* Ancho expandido */
+  background-color: #ffffff; /* Fondo blanco */
+  border-right: 1px solid #ddd; /* Borde */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease; /* Transición para el colapso */
+  overflow: hidden; /* Oculta contenido desbordado */
+}
+
+/* Sidebar en estado colapsado */
+.sidebar.collapsed {
+  width: 80px; /* Ancho colapsado */
+}
+
+/* Cabecera del Sidebar */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9; /* Fondo claro */
+  border-bottom: 1px solid #eee; /* Línea divisoria */
+  transition: padding 0.3s ease; /* Transición para ajustes del espacio */
+}
+
+/* Título de la cabecera */
+.sidebar-header h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  white-space: nowrap; /* Evita que el texto se divida */
+  overflow: hidden; /* Oculta texto fuera del contenedor */
+  transition: opacity 0.3s ease; /* Transición para opacidad */
+}
+
+/* Cuando el sidebar está colapsado */
+.sidebar.collapsed .sidebar-header h2 {
+  opacity: 0; /* Oculta texto en estado colapsado */
+}
+
+/* Ícono del logo */
+.logo-icon {
+  width: 30px; /* Tamaño del ícono */
+  height: 30px;
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+  transition: margin 0.3s ease, width 0.3s ease; /* Suaviza tamaño y espacio */
+}
+
+/* Cuando el sidebar está colapsado */
+.sidebar.collapsed .logo-icon {
+  margin-right: 0; /* Reduce espacio en estado colapsado */
+  width: 25px; /* Ajusta tamaño del logo */
+}
+
+/* Estilo para el menú */
+.menu {
+  list-style: none; /* Sin viñetas */
+  padding: 0;
+  margin: 0;
+}
+
+/* Elementos del menú */
+.menu li {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px; /* Espaciado interno */
+  color: #555;
+  font-size: 15px; /* Tamaño de fuente */
+  cursor: pointer;
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Suaviza el hover */
+}
+
+/* Estilo para el hover */
+.menu li:hover {
+  background-color: #f0f0f0; /* Fondo más claro al pasar el mouse */
+}
+
+/* Íconos del menú */
+.menu-icon {
+  width: 20px; /* Tamaño del ícono */
+  height: 20px;
+  margin-right: 10px; /* Espacio entre ícono y texto */
+  transition: margin 0.3s ease, transform 0.3s ease; /* Transición para efectos */
+}
+
+/* Cuando el sidebar está colapsado */
+.sidebar.collapsed .menu-icon {
+  margin-right: 0; /* Reduce espacio en estado colapsado */
+}
+
+/* Texto del menú */
+.menu li span {
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.3s ease; /* Suaviza ocultamiento del texto */
+}
+
+/* Cuando el sidebar está colapsado */
+.sidebar.collapsed li span {
+  opacity: 0; /* Oculta texto en estado colapsado */
+}
+
+/* Botón para cambiar el estado del sidebar */
+.toggle-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  align-self: flex-end; /* Alinea botón al final */
+}
+
+/* Ícono del botón */
+.toggle-button img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease; /* Agrega suavidad al icono */
+}
+
+/* Ícono de rotación cuando el sidebar está colapsado */
+.sidebar.collapsed .toggle-button img {
+  transform: rotate(180deg); /* Gira el icono en estado colapsado */
+}
+
+/* Media queries para pantallas más pequeñas */
+
+/* Pantallas de tamaño tablet o menor (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px; /* Ancho más pequeño en tablet */
+  }
+
+  .sidebar.collapsed {
+    width: 70px; /* Ancho colapsado en tablet */
+  }
+
+  .sidebar-header {
+    padding: 10px; /* Menos espacio en cabecera */
+  }
+
+  .menu li {
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+  }
+
+  .menu-icon {
+    width: 18px; /* Tamaño de íconos más pequeños */
+    height: 18px;
+  }
+
+  .sidebar.collapsed .menu-icon {
+    margin-right: 0;
+  }
+
+  .sidebar.collapsed .menu li span {
+    opacity: 0; /* Ocultar texto */
+  }
+}
+
+/* Pantallas móviles (max-width: 768px) */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 180px; /* Ancho aún más pequeño en móviles */
+  }
+
+  .sidebar.collapsed {
+    width: 60px; /* Ancho colapsado en móviles */
+  }
+
+  .sidebar-header {
+    padding: 8px; /* Espacio reducido en cabecera */
+  }
+
+  .logo-icon {
+    width: 20px; /* Íconos aún más pequeños */
+    height: 20px;
+  }
+
+  .menu li {
+    font-size: 12px; /* Fuente más pequeña */
+  }
+
+  .menu-icon {
+    width: 16px; /* Íconos aún más pequeños */
+    height: 16px;
+  }
+}
+
+/* Pantallas extra pequeñas (max-width: 480px) */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 150px; /* Ancho más pequeño en móviles muy pequeños */
+  }
+
+  .sidebar.collapsed {
+    width: 50px; /* Ancho colapsado en móviles pequeños */
+  }
+
+  .sidebar-header {
+    padding: 5px; /* Muy poco espacio en cabecera */
+  }
+
+  .menu li {
+    font-size: 10px; /* Tamaño de fuente mínimo */
+  }
+
+  .menu-icon {
+    width: 14px; /* Íconos más pequeños */
+    height: 14px;
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b96fcebf.css",
+    "main.js": "/static/js/main.a35d952f.js",
+    "static/media/Logo UNP.png": "/static/media/Logo UNP.9ef4597b61c150b412cb.png",
+    "static/media/Proveedores Boton.svg": "/static/media/Proveedores Boton.b0057d2e4dffc140ee5d277cff775794.svg",
+    "static/media/Activos Panel Izquierdo.svg": "/static/media/Activos Panel Izquierdo.7464f888b87b0560619aa5eee3fffe19.svg",
+    "static/media/Inicio.svg": "/static/media/Inicio.cd7de8cbf7a0b0b1019808a0c2aee66f.svg",
+    "static/media/Logo_unp_circulos.svg": "/static/media/Logo_unp_circulos.d23fbba3a1aa70a7d2455c21eb98bf74.svg",
+    "static/media/Salida de Activos.svg": "/static/media/Salida de Activos.403eed5dededc8b8d9b0bafbeca7e38a.svg",
+    "static/media/Configuracion.svg": "/static/media/Configuracion.02455828592a5289dd6c6b6e4ab1f706.svg",
+    "static/media/Boton de Cerrar Sesion.svg": "/static/media/Boton de Cerrar Sesion.0d3296b05c4ba77723db81508560075c.svg",
+    "static/media/Usuarios.svg": "/static/media/Usuarios.fb26167bd0b562f54f0cc46d216b888b.svg",
+    "static/media/Calendario.svg": "/static/media/Calendario.86d843638f93c7b57837b8e59ade38c0.svg",
+    "static/media/Campana de Notificacion.svg": "/static/media/Campana de Notificacion.05809f27885442f6ecbfdf317cfb45ec.svg",
+    "static/media/Mensaje.svg": "/static/media/Mensaje.377da4038b433fde8630ffbe567fff3b.svg",
+    "static/media/Icono Flecha al Lado del Administrador.svg": "/static/media/Icono Flecha al Lado del Administrador.a556eb5ecbfbb66d2b7787182ccf659b.svg",
+    "static/media/Todo List.svg": "/static/media/Todo List.dcab31f7993e53e96e2d6283bc6f4ae0.svg",
+    "static/media/Boton de Ayuda.svg": "/static/media/Boton de Ayuda.fa9c798943b71f7a11cbb5ec021fe344.svg",
+    "index.html": "/index.html",
+    "static/media/Lupa de Busqueda Superior.svg": "/static/media/Lupa de Busqueda Superior.e482f5969c9e1892beb61c1248b3dd64.svg",
+    "main.b96fcebf.css.map": "/static/css/main.b96fcebf.css.map",
+    "main.a35d952f.js.map": "/static/js/main.a35d952f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b96fcebf.css",
+    "static/js/main.a35d952f.js"
+  ]
+}
