@@ -1,0 +1,117 @@
+/* Estilo base */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.search-bar {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #555;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alineación a la derecha */
+}
+
+.user-details {
+  text-align: right;
+  display: flex;
+  flex-direction: column; /* Para colocar el nombre encima de la ubicación */
+  margin-right: 20px;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-location {
+  font-size: 14px;
+  color: #777;
+}
+
+.user-icons {
+  display: flex;
+  align-items: center; /* Alinea los iconos verticalmente al centro */
+  margin-left: auto; /* Alinea los iconos a la derecha */
+  gap: 15px; /* Añade espacio entre los iconos */
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer; /* Cursor de mano para íconos interactivos */
+  transition: transform 0.3s ease;
+}
+
+/* Efecto de agrandamiento al pasar el ratón */
+.icon:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Cambiar a columna para dispositivos móviles */
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .search-container {
+    width: 100%;
+    margin-bottom: 10px; /* Agregar espacio debajo del campo de búsqueda */
+  }
+
+  .search-bar {
+    width: 100%; /* Ocupa todo el espacio disponible */
+  }
+
+  .user-info {
+    flex-direction: column; /* Coloca los detalles del usuario en columna */
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .user-details {
+    margin-right: 0;
+    margin-bottom: 10px; /* Espacio entre los detalles del usuario y los íconos */
+  }
+
+  .user-icons {
+    margin-left: 0;
+    justify-content: flex-start; /* Alinea los íconos a la izquierda */
+    margin-top: 10px;
+  }
+
+  .icon {
+    margin-left: 5px; /* Menos espacio entre los íconos en pantallas pequeñas */
+    width: 18px; /* Ajusta el tamaño de los íconos */
+    height: 18px;
+  }
+}

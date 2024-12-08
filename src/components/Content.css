@@ -1,0 +1,181 @@
+/* Estilos para el contenido */
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Espaciado alrededor del contenido */
+}
+
+.logo {
+  max-width: 70%; /* El logo ocupará el 100% del ancho disponible */
+  height: auto; /* Mantiene la proporción del logo */
+  opacity: 0.2; /* Baja opacidad para darle un toque sutil */
+  transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .content {
+    padding: 10px; /* Reducir el espaciado en pantallas pequeñas */
+  }
+
+  .logo {
+    max-width: 90%; /* El logo ocupará el 90% del ancho disponible */
+    opacity: 0.3; /* Un poco más opaco en pantallas más pequeñas */
+  }
+}
+
+/* Estilos para pantallas muy pequeñas (móviles más pequeños) */
+@media (max-width: 480px) {
+  .logo {
+    max-width: 80%; /* El logo ocupará el 80% en pantallas más pequeñas */
+    opacity: 0.4; /* Ajuste de opacidad */
+  }
+}
+
+
+
+
+
+/* Estilos para las opciones de Activos */
+.opciones-activos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;  /* Reducción del padding para acercar más las opciones al contenedor */
+  gap: 10px;
+  margin-top: 20px;  /* Ajustado el margen superior */
+  flex-wrap: wrap;
+}
+
+.opcion {
+  width: 180px; /* Reducir aún más el ancho de cada opción */
+  height: 60px; /* Reducir aún más la altura de cada opción */
+  background-color: #F5F5F5; /* Color de fondo */
+  border-radius: 24px; /* Bordes redondeados */
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: relative; /* Para permitir el posicionamiento de la línea debajo */
+}
+
+.opcion:hover {
+  background-color: #ddd; /* Fondo más oscuro al pasar el mouse */
+}
+
+/* Línea debajo de cada opción */
+.opcion::after {
+  content: '';
+  position: absolute;
+  bottom: 45px; /* Mueve la línea a 45px de la parte inferior */
+  left: 5%; /* Centra la línea, dejando un margen del 5% a la izquierda */
+  width: 90%; /* Establece el ancho de la línea al 90% del cuadro */
+  height: 3px; /* Grosor de la línea */
+  background-color: #133E87; /* Color de la línea */
+}
+
+/* Estilo para los textos de las opciones */
+.opcion span {
+  font-size: 12px; /* Reducir aún más el tamaño de la fuente */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 3px; /* Espacio entre el texto y la línea */
+}
+
+/* Estilos para el contenido */
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alineación al principio para que los elementos estén en columna */
+  padding: 20px; /* Espaciado alrededor del contenido */
+  flex-direction: column; /* Aseguramos que los elementos se alineen en columna */
+}
+
+.logo {
+  max-width: 70%; /* El logo ocupará el 100% del ancho disponible */
+  height: auto; /* Mantiene la proporción del logo */
+  opacity: 0.2; /* Baja opacidad para darle un toque sutil */
+  transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .content {
+    padding: 10px; /* Reducir el espaciado en pantallas pequeñas */
+  }
+
+  .logo {
+    max-width: 90%; /* El logo ocupará el 90% del ancho disponible */
+    opacity: 0.3; /* Un poco más opaco en pantallas más pequeñas */
+  }
+
+  /* Ajustes para las opciones de activos en pantallas pequeñas */
+  .opciones-activos {
+    padding: 10px; /* Reducir el espaciado en pantallas pequeñas */
+    gap: 5px; /* Reducir aún más el espaciado entre las opciones */
+  }
+
+  .opcion {
+    width: 100%; /* Las opciones ocuparán el 100% del contenedor en pantallas pequeñas */
+    height: auto; /* Ajustar la altura automáticamente */
+  }
+}
+
+/* Estilos para pantallas muy pequeñas (móviles más pequeños) */
+@media (max-width: 480px) {
+  .logo {
+    max-width: 80%; /* El logo ocupará el 80% en pantallas más pequeñas */
+    opacity: 0.4; /* Ajuste de opacidad */
+  }
+
+  .opciones-activos {
+    gap: 5px; /* Reducir aún más el espaciado entre las opciones */
+  }
+
+  .opcion {
+    width: 100%; /* Las opciones ocupan todo el ancho en pantallas más pequeñas */
+    height: auto; /* La altura se ajusta de acuerdo al contenido */
+  }
+}
+
+/* Estilos para el cuadro de consulta */
+.query-box {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 20px auto;  /* Añadir espacio vertical después de las opciones */
+  text-align: center;
+}
+
+/* Estilos para el botón de consulta */
+.query-box button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.query-box button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.query-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.query-box li {
+  margin: 5px 0;
+}
