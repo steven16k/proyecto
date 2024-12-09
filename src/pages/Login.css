@@ -17,10 +17,6 @@
   --forgot-password-font-size: 14px;
 }
 
-
-
-
-
 /* Estilos principales */
 body, html {
   margin: 0;
@@ -139,4 +135,18 @@ body, html {
   font-size: var(--forgot-password-font-size);
   color: var(--forgot-password-color);
   cursor: pointer;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .login-box {
+    width: 90%; /* Ajusta el ancho al 90% del viewport */
+    padding: 20px; /* Reduce el padding */
+  }
+  .title {
+    font-size: 18px; /* Reduce el tamaño de fuente */
+  }
+  .input-field {
+    font-size: 14px; /* Reduce el tamaño de texto */
+  }
 }
