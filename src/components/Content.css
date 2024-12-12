@@ -112,7 +112,7 @@
 
   .logo {
     max-width: 90%; /* El logo ocupará el 90% del ancho disponible */
-    opacity: 0.3; /* Un poco más opaco en pantallas más pequeñas */
+    opacity: 3.3; /* Un poco más opaco en pantallas más pequeñas */
   }
 
   /* Ajustes para las opciones de activos en pantallas pequeñas */

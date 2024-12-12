@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
-import "./index.css"; // Asegúrate de que este archivo exista si usas estilos globales
+import "./index.css"; // estilos globales
 
 const Root = () => {
   // Simula el estado de autenticación (puedes reemplazar con lógica real)

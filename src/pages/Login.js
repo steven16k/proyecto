@@ -10,16 +10,14 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+  // Maneja el envío del formulario de inicio de sesión
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const userCredentials = {
-      email,
-      password,
-    };
+    const userCredentials = { email, password };
 
     try {
-      const response = await fetch('http://localhost:5000/login', { // Cambia la URL si tu backend está en otro puerto
+      const response = await fetch('https://tu-api.vercel.app/api/Login', { // Cambia por la URL de tu API
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -30,13 +28,13 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         console.log('Usuario autenticado:', data);
-        // Redirigir a la página principal o hacer lo que corresponda
+        // Aquí puedes redirigir al usuario o guardar datos en localStorage
       } else {
         const errorData = await response.text();
-        setError(errorData); // Mostrar error si las credenciales son incorrectas
+        setError(errorData || 'Credenciales incorrectas');
       }
     } catch (error) {
-      setError('Error al conectar con el servidor');
+      setError('Error al conectar con el servidor'); // Error de red
     }
   };
 
@@ -63,7 +61,7 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="login-button">Login</button>
+          <button className="login-button" type="submit">Login</button>
         </form>
         {error && <p className="error-message">{error}</p>}
         <p className="forgot-password">¿Has Olvidado tu Contraseña?</p>
@@ -72,6 +70,7 @@ const Login = () => {
   );
 };
 
+// Componente para agrupar los campos de entrada con sus íconos
 const InputGroup = ({ icon, type, placeholder, value, onChange }) => (
   <div className="input-group">
     <img src={icon} alt={`${type} Icon`} className="input-icon" />
