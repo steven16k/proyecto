@@ -1,4 +1,6 @@
+//sidebar.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Sidebar.css';
 
 // Importación de íconos
@@ -11,18 +13,25 @@ import ActivosIcon from '../assets/icons/Activos Panel Izquierdo.svg';
 import ProveedoresIcon from '../assets/icons/Proveedores Boton.svg';
 import SalidaActivosIcon from '../assets/icons/Salida de Activos.svg';
 import CerrarSesionIcon from '../assets/icons/Boton de Cerrar Sesion.svg';
-import MenuIcon from '../assets/icons/Icono Flecha al Lado del Administrador.svg'; // Ícono para plegar/expandir
-import LogoIcon from '../assets/icons/Logo_unp_circulos.svg'; // Ícono del logo
+import MenuIcon from '../assets/icons/Icono Flecha al Lado del Administrador.svg'; 
+import LogoIcon from '../assets/icons/Logo_unp_circulos.svg';
 
 const Sidebar = ({ onSelectActivos }) => {
-  const [isCollapsed, setIsCollapsed] = useState(false); // Estado para manejar el colapso
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const navigate = useNavigate();
 
   const toggleSidebar = () => {
-    setIsCollapsed(!isCollapsed); // Cambia el estado
+    setIsCollapsed(!isCollapsed);
   };
 
   const handleActivosClick = () => {
-    onSelectActivos(true); // Llama la función de onSelectActivos que cambiará el estado en el componente padre
+    onSelectActivos(true); // Llama a la función que se pasa como prop
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('authToken'); // Elimina el token de autenticación
+    navigate('/login', { replace: true }); // Redirige a login y reemplaza el historial
+    window.location.reload(); // Recarga la página para asegurarse de que el estado se actualice
   };
 
   return (
@@ -67,7 +76,7 @@ const Sidebar = ({ onSelectActivos }) => {
           <img src={SalidaActivosIcon} alt="Salida de Activos" className="menu-icon" />
           {!isCollapsed && 'Salida de Activos'}
         </li>
-        <li>
+        <li onClick={handleLogout}>
           <img src={CerrarSesionIcon} alt="Cerrar sesión" className="menu-icon" />
           {!isCollapsed && 'Cerrar sesión'}
         </li>
